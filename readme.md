@@ -180,5 +180,3 @@ Script này sẽ gọi `main.py` với các tham số tương ứng.
     pip install open_clip_torch
     ```
 *   **Đọc log lỗi:** Luôn kiểm tra kỹ output và log lỗi để xác định vấn đề.
-
-Chúc bạn thành công với việc chạy LLaMP! Nếu có lỗi cụ thể, bạn có thể cung cấp thêm thông tin để được hỗ trợ tốt hơn.
