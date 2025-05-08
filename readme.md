@@ -1,4 +1,4 @@
-Tuyệt vời! Dưới đây là hướng dẫn chi tiết cách cài đặt và chạy inference (testing) cho project LLaMP dựa trên thông tin từ repository GitHub bạn cung cấp.
+Dưới đây là hướng dẫn chi tiết cách cài đặt và chạy inference (testing) cho project LLaMP
 
 **Tổng quan các bước:**
 
