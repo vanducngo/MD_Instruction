@@ -11,26 +11,28 @@ Nếu nhân viên làm thêm giờ (vượt quá 160 giờ/tháng), thì số gi
 
 ---
 
-### 2. Gợi ý hướng dẫn (Dành cho giảng viên/người hướng dẫn)
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+### 2. Gợi ý hướng dẫn
 
-Khi sinh viên làm bài này, hãy hướng dẫn họ theo quy trình "Chia để trị":
+Thực hiện quy trình "Chia để trị":
 1.  **Xác định biến:** Cần những chiếc hộp nào để lưu dữ liệu? (gioLam, luongMoiGio, tongLuong).
 2.  **Phân tích logic:**
     *   Trường hợp 1: `gioLam <= 160` -> `tongLuong = gioLam * luongMoiGio`
     *   Trường hợp 2: `gioLam > 160` -> `tongLuong = (160 * luongMoiGio) + ((gioLam - 160) * luongMoiGio * 1.5)`
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 
