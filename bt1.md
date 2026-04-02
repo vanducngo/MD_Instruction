@@ -1,3 +1,97 @@
+Đây là tài liệu chi tiết cho **Bài 1**, được thiết kế để bạn giao cho sinh viên. Nó đi từ **đề bài thực tế**, yêu cầu **tư duy pseudocode** trước khi viết code.
+
+---
+
+# BÀI TẬP 1: XÂY DỰNG CHƯƠNG TRÌNH TÍNH LƯƠNG NHÂN VIÊN
+
+### 1. Đề bài
+Công ty X trả lương cho nhân viên theo cơ chế: Lương nhân viên = Số giờ làm trong tháng × Lương mỗi giờ. 
+Nếu nhân viên làm thêm giờ (vượt quá 160 giờ/tháng), thì số giờ làm thêm đó sẽ được tính lương gấp 1.5 lần.
+
+**Yêu cầu:** 
+*   Nhập vào: `Số giờ làm`, `Lương mỗi giờ`.
+*   Tính và in ra: `Tổng lương` của nhân viên đó.
+*   **Lưu ý:** Phải vẽ Pseudocode trước khi viết code Java.
+
+---
+
+### 2. Gợi ý hướng dẫn (Dành cho giảng viên/người hướng dẫn)
+
+Khi sinh viên làm bài này, hãy hướng dẫn họ theo quy trình "Chia để trị":
+1.  **Xác định biến:** Cần những chiếc hộp nào để lưu dữ liệu? (gioLam, luongMoiGio, tongLuong).
+2.  **Phân tích logic:**
+    *   Trường hợp 1: `gioLam <= 160` -> `tongLuong = gioLam * luongMoiGio`
+    *   Trường hợp 2: `gioLam > 160` -> `tongLuong = (160 * luongMoiGio) + ((gioLam - 160) * luongMoiGio * 1.5)`
+
+---
+
+### 3. Pseudocode (Mẫu để sinh viên tham khảo)
+
+```text
+BẮT ĐẦU
+    NHẬP gioLam
+    NHẬP luongMoiGio
+    
+    NẾU gioLam <= 160:
+        tongLuong = gioLam * luongMoiGio
+    NGƯỢC LẠI:
+        gioLamThem = gioLam - 160
+        luongCoBan = 160 * luongMoiGio
+        luongLamThem = gioLamThem * luongMoiGio * 1.5
+        tongLuong = luongCoBan + luongLamThem
+        
+    XUẤT "Tổng lương của nhân viên là: " + tongLuong
+KẾT THÚC
+```
+
+---
+
+### 4. Map từ Pseudocode sang Code Java
+
+Sau khi đã có Pseudocode, việc chuyển sang Java chỉ là học cú pháp.
+
+```java
+import java.util.Scanner;
+
+public class TinhLuong {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Nhập liệu
+        System.out.print("Nhập số giờ làm: ");
+        double gioLam = sc.nextDouble();
+        System.out.print("Nhập lương mỗi giờ: ");
+        double luongMoiGio = sc.nextDouble();
+        
+        double tongLuong;
+        
+        // Logic tính toán (Map từ pseudocode)
+        if (gioLam <= 160) {
+            tongLuong = gioLam * luongMoiGio;
+        } else {
+            double gioLamThem = gioLam - 160;
+            tongLuong = (160 * luongMoiGio) + (gioLamThem * luongMoiGio * 1.5);
+        }
+        
+        // Xuất kết quả
+        System.out.println("Tổng lương là: " + tongLuong);
+    }
+}
+```
+
+---
+
+### 5. Câu hỏi "Hack não" để kiểm tra tư duy
+Sau khi sinh viên chạy được code, hãy hỏi họ các câu hỏi sau để kiểm tra xem họ có thực sự hiểu không:
+
+1.  **Câu hỏi về biên:** "Nếu nhập số giờ làm là âm (ví dụ -5 giờ), chương trình chạy ra sao? Làm thế nào để chặn lỗi này?" (Gợi ý: Dùng `if` để kiểm tra đầu vào).
+2.  **Câu hỏi về kiểu dữ liệu:** "Tại sao dùng `double` mà không dùng `int` cho lương?" (Gợi ý: Lương có thể có số lẻ).
+3.  **Câu hỏi về mở rộng:** "Nếu công ty đổi quy định làm thêm giờ từ 1.5 lên 2.0, em phải sửa dòng code nào?" (Gợi ý: Thay đổi hằng số, dẫn dắt đến việc sử dụng `final double HESO_LAM_THEM = 1.5;`).
+
+**Mục tiêu đạt được:** Sinh viên không nhìn code để chép, mà nhìn vào **logic của đề bài** để tạo ra code.
+
+
+
 BÀI TẬP 1: XÂY DỰNG CHƯƠNG TRÌNH TÍNH LƯƠNG NHÂN VIÊN
 
 1. Đề bài
