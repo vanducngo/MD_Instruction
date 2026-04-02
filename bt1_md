@@ -36,9 +36,9 @@ Lưu ý: Phải vẽ Pseudocode trước khi viết code Java.
 
 2. Gợi ý hướng dẫn
 
-Khi sinh viên làm bài này, hãy hướng dẫn họ theo quy trình "Chia để trị":
+Quy trình "Chia để trị":
 
-Xác định biến: Cần những chiếc hộp nào để lưu dữ liệu? (gioLam, luongMoiGio, tongLuong).
+Xác định biến: Cần những biến nào để lưu dữ liệu? (gioLam, luongMoiGio, tongLuong).
 
 Phân tích logic:
 
@@ -46,12 +46,8 @@ Trường hợp 1: gioLam <= 160 -> tongLuong = gioLam * luongMoiGio
 
 Trường hợp 2: gioLam > 160 -> tongLuong = (160 * luongMoiGio) + ((gioLam - 160) * luongMoiGio * 1.5)
 
-3. Pseudocode (Mẫu để sinh viên tham khảo)
-code
-Text
-download
-content_copy
-expand_less
+3. Pseudocode
+
 BẮT ĐẦU
     NHẬP gioLam
     NHẬP luongMoiGio
@@ -66,8 +62,8 @@ BẮT ĐẦU
         
     XUẤT "Tổng lương của nhân viên là: " + tongLuong
 KẾT THÚC
-4. Map từ Pseudocode sang Code Java
 
+4. Map từ Pseudocode sang Code Java
 Sau khi đã có Pseudocode, việc chuyển sang Java chỉ là học cú pháp.
 
 code
